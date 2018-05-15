@@ -1,0 +1,41 @@
+<view class='head'>
+  <view class='imgBox'>
+    <image src='{{showMember.img}}'/>
+  </view>
+  <navigator class='nickBoxL' url='/pages/myCoin/myCoin'>
+    <view>{{showMember.name}}</view>
+    <text>{{main}} 汪汪币</text>
+    <view id="triangle"></view>
+  </navigator>
+  <button bindtap='sign'>{{isSign}}</button>
+</view>
+<view class='navBox'>
+  <navigator url='/pages/logs/logs' open-type="switchTab">
+  <image src="../../images/icon12.png"/>
+  健康档案
+  </navigator>
+  <navigator url='/pages/personalData/personalData'>
+  <image src="../../images/icon13.png"/>
+  个人资料
+  </navigator>
+  <navigator url='/pages/memberOfFamily/memberOfFamily'>
+  <image src="../../images/icon14.png"/>
+  家庭成员
+  </navigator>
+</view>
+<view style='height:20rpx;background:#F6F8FC;'></view>
+<view class='list'>
+  <navigator url='/pages/help/help'>帮助与反馈</navigator>
+  <navigator url='/pages/receiveAd/receiveAd'>收货地址</navigator>
+  <navigator url='/pages/contactService/contactService'>联系客服</navigator>
+</view>
+
+<view class='shadeBox' hidden='{{isShow}}' bindtap='hideShow'></view>
+<view class='signBox' hidden='{{isShow}}' bindtap='hideShow'>
+  <view class="signHead">签到成功</view>
+  <view class='signBody'>
+    <image src='../../images/icon15.png'/>
+    <view>您随机获得{{x}}个汪汪币</view>
+    <text>{{text}}</text>
+  </view>
+</view>

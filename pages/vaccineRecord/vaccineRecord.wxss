@@ -1,0 +1,130 @@
+
+.addBox{
+  width: 200rpx;
+  height: 140rpx;
+  background: #FFFFFF;
+  box-shadow: 0 0 4rpx 0 rgba(35,35,36,0.30);
+  position: absolute;
+  right: 0;
+  bottom: -60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #3C3C3E;
+  box-sizing: border-box;
+  padding-top: 78rpx
+}
+.addBtn{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  border-radius: 50%;
+  background: #D2D882;
+  border: 2rpx solid rgba(255,255,255,0.60);
+  text-align: center;
+  line-height: 100rpx;
+  right: 50rpx;
+  top: 102rpx;
+  color: #fff;
+  z-index: 100;
+  font-size: 50rpx;
+}
+
+.headTit{
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 32rpx;
+  font-size:28rpx;
+  color: #111111;
+}
+.headTit view{
+  float: right;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+.headTit view text{
+  vertical-align: middle;
+}
+.headTit view.n1 text.l1{
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background: #5DCFFF;
+  vertical-align: middle;
+  margin: 0 10rpx;
+}
+.headTit view.n2 text.l1{
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background: #FFD740;
+  vertical-align: middle;
+  margin: 0 10rpx;
+}
+.headTit view.n3 text.l1{
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background: #ccc;
+  vertical-align: middle;
+  margin: 0 10rpx;
+}
+.list image{
+  width: 84rpx;
+  height: 84rpx;
+}
+.listBox{
+  border-top: 1rpx solid #EAEDF3;
+}
+.list{
+  border-bottom: 1rpx solid #EAEDF3;
+  display: flex;
+  align-items:center;
+  width: 100%;
+}
+.list .dateTime{
+  font-size: 28rpx;
+  color: #111111;
+  padding: 0 36rpx;
+  width: 185rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.list .dateTime text{
+  display: block;
+}
+.list .rigBox{
+  border-left: 1rpx solid #EAEDF3;
+   padding: 36rpx; 
+  font-size: 24rpx;
+  color: #111111;
+  width: 565rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.list scroll-view{
+  width: auto;
+  white-space:nowrap;
+}
+
+.list scroll-view navigator{
+  display: inline-block;
+  text-align: center;
+  margin-right: 30rpx;
+}
+.list scroll-view navigator image{
+  display: block;
+  margin: 0 auto;
+}
+.list scroll-view view.ss{
+  display: inline-block;
+  text-align: center;
+  margin-right: 30rpx;
+}
+.list scroll-view view.ss image{
+  display: block;
+  margin: 0 auto;
+}
+

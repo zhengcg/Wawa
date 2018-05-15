@@ -1,0 +1,50 @@
+<view class='swiper'>
+<view class="rongqi"  bindtouchmove='touchmove' bindtouchstart='touchstart'>
+  <view wx:for="{{members}}"  wx:key="{{item.id}}" class="item {{item.class}}" bindtap='changeJs' data-index="{{index}}">
+        <view wx-if="{{item.img}}">
+        <view class='nickBox'>
+          {{item.name}}
+        </view>
+        <view class='headImg'>
+          <image src='{{item.img}}'/>
+        </view>
+        </view>
+        <view wx-if="{{!item.img}}">
+        <view class='nickBox' catchtap='gotoAdd'>
+          添加
+        </view>
+         <view class='headImg' catchtap='gotoAdd'>
+          <image src='../../images/icon24.png'/>
+        </view>
+        </view>
+      </view>
+     <!-- <view class="item itemright3" on  hidden='{{isShowAdd}}'>
+    
+        
+     </view> -->
+  </view>
+</view>
+<view class='listBox'>
+  <view>
+    <text>就诊时间</text>{{date}}
+    <picker mode="date" value="{{date}}"  bindchange="bindDateChange"  end="{{endDate}}">
+    <view></view>
+    </picker>
+  </view>
+  <navigator url='/pages/jzyy/jzyy?jz_id={{jz_id}}' open-type='redirect' style='overflow:hidden'><text>就诊医院</text>{{jzyy.yy_title}}</navigator>
+  <view><text>就诊科室</text>
+    <picker value="{{ksIndex}}" range="{{ksList}}" range-key="{{'title'}}" bindchange="bindChangeKS">
+      <view>{{ksList[ksIndex].title}}<text style='margin-right:30rpx;'></text></view>
+    </picker>
+  </view>
+</view>
+<view class='imgBox'>
+  <view class='sm' bindtap='gotoHYD'>化验单<text>带参考值范围的</text></view>
+  <view class='sm' bindtap='gotoYXBG'>影像报告<text>带影像的，如B超</text></view>
+  <view bindtap='gotoCFD'>处方单</view>
+  <view bindtap='gotoBLJL'>病例记录</view>
+ <view bindtap='gotoYYJL'>用药记录</view>
+  <view bindtap='gotoPAY'>医疗费用</view>
+</view>
+
+

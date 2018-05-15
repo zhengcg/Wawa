@@ -1,0 +1,41 @@
+
+<view class='headBox y' wx:if="{{!img}}">
+  <view bindtap='chooseImg'>
+    <image src='{{img}}'/>
+  </view>
+</view>
+<view class='headBox' wx:else>
+  <view bindtap='chooseImg'>
+    <image src='{{img}}'/>
+  </view>
+</view>
+ <view class='title'>基本信息</view>
+<view class='listBox'>
+ 
+  <view>
+    <text>关系</text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{membersArray}}" >
+    <view>{{membersArray[index]}}<text style='display:inline-block;width:30rpx;'></text></view>
+    </picker>
+  </view>
+  <view>
+    <text>昵称</text>
+    <input placeholder='请输入' value='{{name}}' bindinput="changeName" maxlength='5'/>
+  </view>
+  <view>
+    <text>生日</text>{{date}}
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange" end="{{endDate}}">
+    <view></view>
+    </picker>
+  </view>
+</view>
+
+<view style='height:222rpx;'></view>
+<view class='footer' hidden='{{isShowBtn}}'>
+  <button bindtap='submitBtn'>保存</button>
+</view>
+<view class='footer' hidden='{{!isShowBtn}}'>
+<button bindtap='delBtn'  style='width:280rpx;'>删除</button>
+  <button bindtap='editBtn' style='width:280rpx;left:395rpx;'>保存</button>
+  
+</view>

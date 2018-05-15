@@ -1,0 +1,83 @@
+
+<view class='swiper'>
+<view class="rongqi"  bindtouchmove='touchmove' bindtouchstart='touchstart'>
+  <view wx:for="{{members}}"  wx:key="{{item.id}}" class="item {{item.class}}" bindtap='changeJs' data-index="{{index}}">
+        <view wx-if="{{item.img}}">
+        <view class='nickBox'>
+          {{item.name}}
+        </view>
+        <view class='headImg'>
+          <image src='{{item.img}}'/>
+        </view>
+        </view>
+        <view wx-if="{{!item.img}}">
+        <view class='nickBox' catchtap='gotoAdd'>
+          添加
+        </view>
+         <view class='headImg' catchtap='gotoAdd'>
+          <image src='../../images/icon24.png'/>
+        </view>
+        </view>
+      </view>
+     <!-- <view class="item itemright3" on  hidden='{{isShowAdd}}'>
+    
+        
+     </view> -->
+  </view>
+</view>
+<view class='wt clearfix'>
+  <view class='curDate'>
+      <picker mode="date" value="{{curDate}}" bindchange="changeWTDate" end="{{endDate}}">
+        <view class="picker">
+           {{curDate}}<image src='../../images/icon33.png'></image>
+        </view>
+      </picker>
+      <picker mode="time" value="{{curTime}}" bindchange="changeWTTime">
+        <view class="picker">
+           {{curTime}}<image src='../../images/icon33.png'></image>
+        </view>
+      </picker>
+  </view>
+  <view class='btnView'>
+    <view class='min' bindtap='minTem'>-</view>
+    <view class='curNum' >{{temNum}}℃</view>
+    <view class='add' bindtap='addTem'>+</view>
+  </view>
+</view>
+<view class='iconBox'><image src='../../images/icon20.png' wx:if="{{temNum<=37.4}}" mode='aspectFit'/><image src='../../images/icon26.png'  wx:if="{{temNum>=37.5&&temNum<=38}}"  mode='aspectFit'/><image src='../../images/icon27.png'  mode='aspectFit'  wx:if="{{temNum>=38.1&&temNum<=39}}"/><image  wx:if="{{temNum>39}}" src='../../images/icon28.png'  mode='aspectFit'/></view>
+<view class='wdj'>
+  <image src='../../images/icon23.png'></image>
+  <view class='slider'>
+    <slider block-size="24" backgroundColor="#fff" activeColor="#fc7b7b" bindchange="changeTem"  min='350' max='420' step='1' value='{{temNum*10}}' />
+  </view>
+</view>
+<view class='curTem'>
+  <text>当前体温：{{temNum}}℃</text>
+  <button bindtap='submit' hidden='{{!isCan}}'>确认</button>
+</view>
+<view style='margin-top:30rpx;height:1rpx;box-shadow: 0 -1px 2px 0 rgba(0,0,0,0.12);'></view>
+<view class='dateView clearfix' style='margin-top:30rpx;'>
+      
+      <picker mode="date" value="{{dateStart}}" bindchange="changeDateStart" end="{{endDate}}">
+      
+        <view class="picker">
+        查询时间：{{dateStart}}<image src='../../images/icon33.png'></image>
+        </view>
+      </picker>    
+      <picker mode="date" value="{{dateEnd}}" bindchange="changeDateEnd" end="{{endDate}}"> 
+        <view class="picker">
+        至 {{dateEnd}}<image src='../../images/icon33.png'></image>
+           
+        </view>
+      </picker>
+      <!-- <picker mode="time" value="{{timeStart}}" bindchange="changeTimeStart">
+        <view class="picker">
+           {{timeStart}}
+        </view>
+      </picker> -->
+      <button bindtap='submitRange'>查询</button>
+</view>
+<view class='container' hidden='{{isCanvas}}'>
+<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler"></canvas>
+</view>
+

@@ -1,0 +1,7 @@
+
+    <camera device-position="back" flash="off" binderror="error"  class='carmea'>
+    <cover-image class='line' src='../../images/carmea.png'></cover-image>
+    <cover-image class='pai'  bindtap="takePhoto" src='../../images/pai.png'></cover-image>
+
+    </camera>
+

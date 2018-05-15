@@ -1,0 +1,54 @@
+<view class='swiper'>
+<view class="rongqi"  bindtouchmove='touchmove' bindtouchstart='touchstart'>
+  <view wx:for="{{members}}"  wx:key="{{item.id}}" class="item {{item.class}}" bindtap='changeJs' data-index="{{index}}">
+        <view wx-if="{{item.img}}">
+        <view class='nickBox'>
+          {{item.name}}
+        </view>
+        <view class='headImg'>
+          <image src='{{item.img}}'/>
+        </view>
+        </view>
+        <view wx-if="{{!item.img}}">
+        <view class='nickBox' catchtap='gotoAdd'>
+          添加
+        </view>
+         <view class='headImg' catchtap='gotoAdd'>
+          <image src='../../images/icon24.png'/>
+        </view>
+        </view>
+      </view>
+     <!-- <view class="item itemright3" on  hidden='{{isShowAdd}}'>
+    
+        
+     </view> -->
+  </view>
+</view>
+
+<view class='title'>
+  基本信息
+</view>
+<view class='listBox'>
+  <view>
+    <text>就诊时间</text>{{date}}
+    <picker mode="date" value="{{date}}"  end="{{endDate}}" bindchange="bindDateChange">
+    <view></view>
+    </picker>
+  </view>
+  <view bindtap='gotoJZYY'>
+  <text>医院或体检中心</text>
+  {{gyyyTitle}}
+  </view>
+ 
+</view>
+<view class='imgBox'>
+  <view wx:for="{{imgs}}" wx:key="{{index}}" bindtap='previewImg' data-index="{{index}}">
+    <image src='{{item}}'/>
+    <text class='closeBtn' catchtap='removeImg' data-index="{{index}}"></text>
+  </view>
+  <view class='uploadBtn' bindtap='chooseImg'></view>
+</view>
+<view style='height:222rpx;'></view>
+<view class='footer'>
+  <button bindtap='submit'>保存</button>
+</view>

@@ -1,0 +1,52 @@
+<view class='swiper'>
+<view class="rongqi"  bindtouchmove='touchmove' bindtouchstart='touchstart'>
+  <view wx:for="{{members}}"  wx:key="{{item.id}}" class="item {{item.class}}" bindtap='changeJs' data-index="{{index}}">
+        <view wx-if="{{item.img}}">
+        <view class='nickBox'>
+          {{item.name}}
+        </view>
+        <view class='headImg'>
+          <image src='{{item.img}}'/>
+        </view>
+        </view>
+        <view wx-if="{{!item.img}}">
+        <view class='nickBox' catchtap='gotoAdd'>
+          添加
+        </view>
+         <view class='headImg' catchtap='gotoAdd'>
+          <image src='../../images/icon24.png'/>
+        </view>
+        </view>
+      </view>
+     <!-- <view class="item itemright3" on  hidden='{{isShowAdd}}'>
+    
+        
+     </view> -->
+  </view>
+</view>
+<view class='headTit'>
+  距离下次疫苗还有{{n}}天
+  <view class='n3'><text class='l1'></text><text>已打</text></view>
+  <view class='n2'><text class='l1'></text><text>选打</text></view>
+  <view class='n1'><text class='l1'></text><text>必打</text></view>
+</view>
+<view class='listBox'>
+<scroll-view scroll-y="true" style='height:900rpx;'   scroll-into-view='{{cityListId}}' scroll-with-animation>
+<view>
+  <view class='list' wx:for="{{list}}" wx:key="{{index}}" id="n{{index}}">
+    <view class='dateTime'><text>{{item.name}}</text></view>
+    <view class='rigBox'>
+     <scroll-view scroll-x>
+        <view class='ss' wx:for="{{item.info}}" wx:key="{{index}}" wx:for-item='jtem'  bindtap='gotoAddV' data-id="{{jtem.id}}" data-yid="{{jtem.ym_id}}" data-done="{{jtem.is_done}}">
+          <image src='../../images/icon32.png' wx-if='{{jtem.is_done==1}}'/>
+          <image src='../../images/icon21.png' wx-if='{{jtem.is_must==1&&jtem.is_done==0}}'/>
+          <image src='../../images/icon22.png' wx-if='{{jtem.is_must==2&&jtem.is_done==0}}'/>
+          <text>{{jtem.title}}\n<text style='font-size:18rpx;'>{{jtem.nums}}</text></text>
+        </view>
+      </scroll-view>
+    </view>
+   
+  </view>
+</view>
+  </scroll-view>
+</view>

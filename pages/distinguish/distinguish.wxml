@@ -1,0 +1,36 @@
+<!-- <view class="title">基本信息</view>
+<view class='listBox'>
+  <view><text>姓名</text><input type='text' value='{{info.title.name}}'></input></view>
+  <view><text>性别</text><input type='text' value='{{info.title.sex}}'></input></view>
+  <view><text>年龄</text><input type='number' value='{{info.title.age}}'></input></view>
+  <view><text>医院</text><input type='text' value='{{info.title.hospital}}'></input></view>
+  <view><text>科室</text><input type='text' value='{{info.title.keshi}}'></input></view>
+  <view><text>检查名称</text><input type='text' value='{{info.title.name}}'></input></view>
+  <view><text>检查时间</text><input type='text' value='{{info.title.check_time}}'></input></view>
+</view> -->
+<view style='padding:40rpx;'>
+<view id="panel" class="flex-column">
+    <view class="flex-cell flex-row">
+    <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;'>项目</text>
+      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>代码</text>
+      
+      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>结果</text>
+      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>参考范围</text>
+    </view>
+    <view class="flex-row flex-cell" wx:for="{{info}}" wx:key="{{index}}">
+     <input class="flex-cell flex-row" type='text' value='{{item.title_cn}}'  data-index="{{index}}"  bindinput='changeTitleCn' style='-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;'></input>
+       <input class="flex-cell flex-row" type='text' value='{{item.title}}' data-index="{{index}}" bindinput='changeTitle' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'></input>
+    
+      <input class="flex-cell flex-row" type='text' value='{{item.result}}'  data-index="{{index}}" bindinput='changeResult' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'></input>
+      <input class="flex-cell flex-row" type='text' value='{{item.range}}'  data-index="{{index}}" bindinput='changeRange' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'></input>
+    </view>
+    
+  </view>
+</view>
+
+
+
+<view style='height:222rpx;'></view>
+<view class='footer'>
+  <button bindtap='submit'>确认</button>
+</view>

@@ -1,0 +1,74 @@
+<view class='swiper'>
+<view class="rongqi"  bindtouchmove='touchmove' bindtouchstart='touchstart'>
+  <view wx:for="{{members}}"  wx:key="{{item.id}}" class="item {{item.class}}" bindtap='changeJs' data-index="{{index}}">
+        
+        <view class='nickBox'>
+          {{item.name}}
+        </view>
+        <view class='headImg'>
+          <image src='{{item.img}}'/>
+        </view>
+      </view>
+     <view class="item itemright3" on catchtap='gotoAdd' hidden='{{isShowAdd}}'>
+     
+        <view class='nickBox' >
+          添加
+        </view>
+        <view class='headImg'>
+          <image src='../../images/icon24.png'/>
+        </view>
+     </view>
+  </view>
+</view>
+<view class='listBox'>
+  <view>
+    <text>购药时间</text>{{date}}
+  </view>
+  <view class='jjt'>
+    <text>购药医院</text>{{gyyyTitle}}
+  </view>
+  <view>
+  <text>购药地点</text>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}" wx:key="{{index}}">
+      <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+    </label>
+  </radio-group>
+  
+  </view>
+  <view>
+  <text>药品信息</text>
+  <input type='text' style='width:450rpx;' placeholder='请输入国药准字编号'  bindinput='changeCode'></input>
+  <text style="float:right;color: #F39800;" bindtap='scanFn'>查询</text>
+  </view>
+</view>
+<view class='slBox'>
+<text>示例：</text>
+<image src='../../images/icon30.png'></image>
+</view>
+
+<view style='padding:40rpx;'>
+  <view id="panel" class="flex-column">
+    <view class="flex-row flex-cell">
+      
+       <text class="flex-cell flex-row" style='-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;'>药品名称</text>
+      <text class="flex-cell flex-row" style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>数量</text>
+      <text class="flex-cell flex-row" style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>单价</text>
+      <text class="flex-cell flex-row" style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'></text>
+    </view>
+   <view class="flex-row flex-cell" wx:for="{{list}}" wx:key="{{index}}">
+      
+      <text class="flex-cell flex-row"  style='-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;'>{{item.title}}</text>
+      <text class="flex-cell flex-row" style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>{{item.amount}}</text>
+      <text class="flex-cell flex-row" style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>{{item.price}}</text>
+      <text class="flex-cell flex-row trR" data-id="{{item.id}}" bindtap='removeYYMM' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'></text>
+    </view>
+
+  </view>
+</view>
+
+<view style='height:222rpx;'></view>
+<view class='footer'>
+  <button bindtap='submit'>保存</button>
+  <view bindtap='goBack' class='goBack'>返回</view> 
+</view>

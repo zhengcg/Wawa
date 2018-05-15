@@ -1,0 +1,97 @@
+{
+  "pages":[ 
+  
+    
+    "pages/login/login",
+    "pages/carmea/carmea",
+    "pages/goodsDetail/goodsDetail",
+    "pages/exchangeList/exchangeList",
+    "pages/getCoinList/getCoinList",
+    "pages/myCoin/myCoin",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/addAddress/addAddress",
+    "pages/receiveAd/receiveAd",
+    "pages/receiveAd1/receiveAd1",
+    
+    "pages/medicationRecord/medicationRecord",
+    "pages/medicationRecord1/medicationRecord1",
+    "pages/temperatureDetection/temperatureDetection",
+    
+    "pages/personalData/personalData",
+    "pages/addMembers/addMembers",
+    "pages/index/index",
+    "pages/uploadReport/uploadReport",
+    "pages/memberOfFamily/memberOfFamily",
+    "pages/hospital/hospital",
+    "pages/department/department",
+    "pages/drugs/drugs",
+    "pages/temperature/temperature",
+    "pages/vaccine/vaccine",
+    "pages/physical/physical",
+    "pages/expenditure/expenditure",
+    "pages/hy/hy",
+    "pages/hc/hc",
+    "pages/yc/yc",
+    "pages/cc/cc",
+    "pages/bc/bc",
+    "pages/tj/tj",
+    "pages/jzyy/jzyy",
+    "pages/jzyy1/jzyy1",
+    "pages/jzyy2/jzyy2",
+    "pages/addVaccine/addVaccine",
+    "pages/vaccineRecord/vaccineRecord", 
+    "pages/contactService/contactService",
+    "pages/physicaRecords/physicaRecords",
+    "pages/help/help",
+    "pages/helpQ/helpQ",
+    "pages/feedBack/feedBack",
+    "pages/distinguish/distinguish",
+    "pages/uploadBLJL/uploadBLJL",
+    "pages/uploadCFD/uploadCFD",
+    "pages/uploadHYD/uploadHYD",
+    "pages/drugsInfo/drugsInfo", 
+    "pages/drugsInfo1/drugsInfo1",  
+    "pages/pay/pay",
+    "pages/uploadYXBG/uploadYXBG",
+    "pages/list/list"
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F39800",
+    "navigationBarTitleText": "汪汪健康",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#F39800",
+    "backgroundColor":"#fff",
+    "borderStyle":"#DFDFDF",  
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/icon02.png",
+        "selectedIconPath":"images/icon01.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "健康档案",
+        "iconPath": "images/icon04.png",
+        "selectedIconPath": "images/icon03.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/icon06.png",
+        "selectedIconPath": "images/icon05.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "downloadFile": 30000
+  },
+  "debug": false
+}

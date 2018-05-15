@@ -1,0 +1,23 @@
+<view class='listBox'>
+  <view class="twj">
+    <text>注射时间</text>{{date}}
+    <picker mode="date" value="{{date}}"  bindchange="bindDateChange">
+    <view></view>
+    </picker>
+  </view>
+  <view>
+    <text>注射地点</text>
+    <input type='text' bindinput='changePlace' value='{{place}}'></input>
+  </view>
+</view>
+<view style='position:relative;height:208rpx;'>
+<button bindtap='submit'>保存</button>
+<view bindtap='goBack' class='goBack'>返回</view> 
+</view>
+
+<view class='sm'>
+<view class='tit'>{{detail.title}} {{detail.nums}}</view>
+<view style='text-indent:70rpx;'>{{detail.reason}}</view>
+<view style='text-indent:70rpx;'>{{detail.principle}}</view>
+<view style='text-indent:70rpx;'>{{detail.method}}</view>
+</view>

@@ -1,0 +1,251 @@
+/* .head{
+  background: #EAF090;
+  height: 228rpx;
+  position: relative;
+}
+.headImg{
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 4rpx solid rgba(255,255,255,0.70);
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  margin-left: -70rpx;
+  margin-top: -70rpx;
+  overflow: hidden;
+  z-index: 100;
+    background: #EAF090;
+}
+.headImg image{
+  display: block;
+  width: 136rpx;
+  height: 136rpx;
+}
+.nickBox{
+  width: 280rpx;
+  height: 180rpx;
+  background: #FFFFFF;
+  box-shadow: 0 0 4rpx 0 #DFEC2A;
+  position: absolute;
+  left: 50%;
+  margin-left: -140rpx;
+  top: 120rpx;
+  text-align: center;
+  font-size: 32rpx;
+color: #F39800;
+padding-top: 100rpx;
+box-sizing: border-box;
+z-index: 10;
+} */
+/* .head{
+   background: #EAF090; 
+  height: 228rpx;
+  position: relative;
+}
+.headImg{
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 4rpx solid rgba(255,255,255,0.70);
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  margin-left: -70rpx;
+  margin-top: -80rpx;
+  overflow: hidden;
+  z-index: 100;
+   background: #EAF090; 
+} */
+/* .headImg image{
+  display: block;
+  width: 136rpx;
+  height: 136rpx;
+}
+.nickBox{
+  width: 90%;
+  height: 180rpx;
+  background: #FFFFFF;
+  box-shadow: 0 0 4rpx 0 #DFEC2A;
+  position: absolute;
+  left:50%;
+  margin-left: -45%;
+  top: 70rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #3C3C3E;
+
+padding-top: 100rpx;
+box-sizing: border-box;
+z-index: 10;
+} */
+.addBox{
+  width: 200rpx;
+  height: 140rpx;
+  background: #FFFFFF;
+  box-shadow: 0 0 4rpx 0 rgba(35,35,36,0.30);
+  position: absolute;
+  right: 0;
+  bottom: -60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #3C3C3E;
+  box-sizing: border-box;
+  padding-top: 78rpx
+}
+.addBtn{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  border-radius: 50%;
+  background: #D2D882;
+  border: 2rpx solid rgba(255,255,255,0.60);
+  text-align: center;
+  line-height: 100rpx;
+  right: 50rpx;
+  top: 102rpx;
+  color: #fff;
+  z-index: 100;
+  font-size: 50rpx;
+}
+.iconBox{
+  /* width: 160rpx; */
+  height: 160rpx;
+  margin: 54rpx auto 20rpx auto;
+  text-align: center;
+}
+.iconBox image{
+  display: block;
+  height: 160rpx;
+  margin: 0 auto;
+}
+.wdj{
+  position: relative;
+  width: 622rpx;
+  height: 118rpx;
+  margin: 0 auto;
+}
+.wdj image{
+  display: block;
+  margin: 0 auto;
+  width: 622rpx;
+  height: 118rpx;
+
+}
+.wdj .slider{
+  position: absolute;
+  left: 60rpx;
+  top: 28rpx;
+  right:0rpx;
+}
+.curTem{
+  text-align: center;
+  width: 622rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  position: relative
+}
+.curTem button{
+  width: 150rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  position: absolute;right: 0;
+  background: #FF5B5B;
+  border-radius: 8rpx;
+  color: #fff;
+  font-size: 28rpx;
+  top: 0;
+}
+.curTem button::after{
+  border: 0;
+  
+}
+
+
+.container {
+    height: 100%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    -webkit-text-size-adjust:none;
+    -webkit-user-select: none;
+    font-size: 35rpx;
+    color: #333;
+    font-family: Helvetica,Arial,"Helvetica Neue","Droid Sans","Microsoft YaHei",sans-serif;
+    margin-top: 40rpx;
+}
+.canvas {
+    width: 100%;
+    height: 200px;
+}
+.wt{
+  height: 100rpx;
+  margin: 40rpx 40rpx 0 40rpx;
+  border-top: 1rpx solid #DCE2EE;
+  border-bottom: 1rpx solid #DCE2EE;
+  font-size: 32rpx;
+  position: relative;
+  color: #111;
+  line-height: 100rpx;
+}
+.wt picker{
+  float: left;
+  margin-right: 20rpx;
+}
+.btnView{
+  position: absolute;
+  right: 0;
+  height: 60rpx;
+  top: 20rpx;
+  display: flex;
+  line-height: 60rpx;
+}
+.btnView .min,.btnView .add{
+  width: 60rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1rpx solid #FFC16A;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 36rpx;
+}
+.curNum{
+  padding: 0 20rpx;
+}
+.dateView{
+  padding: 10rpx 40rpx;
+  font-size:28rpx;
+  color: #111111;
+  position: relative;
+}
+.dateView picker{
+  float: left;
+  margin-right: 10rpx;
+}
+.dateView button{
+  background: #F39800;
+border-radius: 8rpx;
+height: 68rpx;
+line-height: 68rpx;
+width: 98rpx;
+font-size: 28rpx;
+color: #FFFFFF;
+padding: 0;
+position: absolute;
+right: 40rpx;
+ margin-top: -10rpx; 
+}
+.dateView button::after{
+  border: 0;
+}
+.picker image{
+  vertical-align: middle;
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 15rpx;
+}
