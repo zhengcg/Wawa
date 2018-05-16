@@ -1,7 +1,7 @@
 {
   "pages":[ 
   
-    
+    "pages/cl/cl",
     "pages/login/login",
     "pages/carmea/carmea",
     "pages/goodsDetail/goodsDetail",

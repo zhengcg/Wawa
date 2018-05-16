@@ -1,0 +1,25 @@
+/* pages/cl/cl.wxss */
+.main{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+.nav{
+  width: 250rpx;
+  border-right: 1rpx solid #000;
+  box-sizing: border-box;
+
+}
+.nav>view{
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  border-bottom: 1rpx solid #000;
+}
+.content{
+  padding: 0 10rpx;
+  overflow: auto;
+}
+.content>view{
+  border:1rpx solid #000;
+  height:500rpx;
+}
