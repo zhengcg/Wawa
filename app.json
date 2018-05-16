@@ -1,10 +1,11 @@
 {
   "pages":[ 
   
-    "pages/cl/cl",
+   "pages/goodsDetail/goodsDetail",
     "pages/login/login",
+    "pages/cl/cl",
     "pages/carmea/carmea",
-    "pages/goodsDetail/goodsDetail",
+    
     "pages/exchangeList/exchangeList",
     "pages/getCoinList/getCoinList",
     "pages/myCoin/myCoin",

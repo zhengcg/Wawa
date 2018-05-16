@@ -1,33 +1,27 @@
 <view class="main">
   <view class='nav'>
-    <view>A</view>
+    <view class='{{tabCur=="1"?"cur":"default"}}' bindtap='changeTab' data-index="1">A</view>
     <view>B</view>
     <view>C</view>
     <view>D</view>
     <view>E</view>
     <view>F</view>
   </view>
-  <scroll-view scroll-y style='height:1300rpx;' scroll-into-view="B">
+  <scroll-view scroll-y style='height:1300rpx;'>
   <view  class='content'>
+    <navigator>
+      <text>十多个点发货很高很高放假回家</text>
+      8
+    </navigator>
+     <navigator>
+      <text>十多个点发货很高很高放假当时是发多少高大上股份回家</text>
+      10
+    </navigator>
+     <navigator>
+      <text>十多个点发货很高很高放假回家</text>
+      12
+    </navigator>
   
-    <view id="A">
-      aaaaaaaaaaaaaaaaaaaaaa
-    </view>
-    <view id="B">
-      bbbbbbbbbbbbbbbbbbbbbb
-    </view>
-    <view id="C">
-      cccccccccccccccccccccc
-    </view>
-    <view id="D">
-      dddddddddddddddddddddd
-    </view>
-    <view id="E">
-      eeeeeeeeeeeeeeeeeeeee
-    </view>
-    <view id="F">
-      ffffffffffffffffffff
-    </view>
-    </view>
+  </view>
   </scroll-view>
 </view>

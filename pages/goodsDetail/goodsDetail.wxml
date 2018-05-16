@@ -13,6 +13,11 @@
    <view class='plus' bindtap='plusNum'>+</view>
   </view>
 </view>
+<view class='colorBox'>
+  <view class='tit'>颜色</view>
+  <view class='colorList'>
+  </view>
+</view>
 <view class='addAdr' hidden='{{isYDZ}}'><navigator url='/pages/addAddress/addAddress?path=goodsDetail'>
 <view>添加收货地址</view>
 <text>还没有收货地址，请点击添加</text>

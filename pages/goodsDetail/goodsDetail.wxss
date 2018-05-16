@@ -27,6 +27,23 @@
   border-bottom: 1rpx solid #E5E5E5;
   margin-top: 20rpx;
 }
+.colorBox{
+  border-bottom: 1rpx solid #E5E5E5;
+   padding: 0 40rpx;
+   height: 272rpx;
+}
+.colorBox .tit{
+  font-size: 32rpx;
+  color: #111111;
+  padding: 38rpx 0 30rpx 0;
+
+}
+.colorList{
+  width: 668rpx;
+  height: 128rpx;
+  border-radius: 64rpx;
+  background: #F7F7F7;
+}
 .numBox text{
   font-size: 32rpx;
   color: #111111;
