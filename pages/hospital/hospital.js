@@ -31,6 +31,15 @@ Page({
     this.checkToken()
 
   },
+  gotoDetail: function (e) {
+    var self = this;
+    var id = e.currentTarget.dataset.id;
+    var title=e.currentTarget.dataset.title;
+    wx.redirectTo({
+      url: '../hospitalDetail/hospitalDetail?id=' + id + '&mid=' + self.data.mid + '&mni_time=' + self.data.mni_time + '&max_time=' + self.data.max_time +'&title='+title,
+    })
+
+  },
   checkToken: function () {
     if (wx.getStorageSync('token')) {
       this.getList()

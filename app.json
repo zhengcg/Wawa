@@ -1,8 +1,9 @@
 {
   "pages":[ 
   
-   
+    
     "pages/login/login",
+    "pages/hospitalDetail/hospitalDetail",
     "pages/cl/cl",
     "pages/carmea/carmea",
     "pages/goodsDetail/goodsDetail",
