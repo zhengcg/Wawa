@@ -16,6 +16,24 @@
 <view class='colorBox'>
   <view class='tit'>颜色</view>
   <view class='colorList'>
+    <view class='leftBtn'><image src='../../images/icon34.png'></image></view>
+    <scroll-view scroll-x="true">
+      <view wx:for="{{goodscolor}}" wx:key="{{index}}" style='background:{{item.attrVal}}' data-id="{{item.attrId}}" data-index="{{index}}" bindtap='selectColor' class='{{color==index?"cur":"default"}}'><image src='../../images/icon36.png'></image></view>
+      
+
+    </scroll-view>
+    <view class='rightBtn'><image src='../../images/icon35.png'></image></view>
+  </view>
+</view>
+<view class='sizeBox'>
+  <view class='tit'>尺寸</view>
+  <view class='sizeList'>
+    <view class='leftBtn'><image src='../../images/icon34.png'></image></view>
+    <scroll-view scroll-x="true">
+      <text wx:for="{{goodssize}}" wx:key="{{index}}"  data-id="{{item.attrId}}" data-index="{{index}}" bindtap='selectSize' class='{{size==index?"cur":"default"}}'>{{item.attrVal}}</text>
+      
+    </scroll-view>
+    <view class='rightBtn'><image src='../../images/icon35.png'></image></view>
   </view>
 </view>
 <view class='addAdr' hidden='{{isYDZ}}'><navigator url='/pages/addAddress/addAddress?path=goodsDetail'>

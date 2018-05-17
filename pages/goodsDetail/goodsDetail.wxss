@@ -32,17 +32,112 @@
    padding: 0 40rpx;
    height: 272rpx;
 }
+.sizeBox{
+  border-bottom: 1rpx solid #E5E5E5;
+   padding: 0 40rpx;
+   height: 272rpx;
+}
 .colorBox .tit{
   font-size: 32rpx;
   color: #111111;
   padding: 38rpx 0 30rpx 0;
 
 }
-.colorList{
+.sizeBox .tit{
+  font-size: 32rpx;
+  color: #111111;
+  padding: 38rpx 0 30rpx 0;
+
+}
+.colorBox .colorList{
   width: 668rpx;
   height: 128rpx;
   border-radius: 64rpx;
   background: #F7F7F7;
+  position: relative;
+}
+.sizeBox .sizeList{
+  width: 668rpx;
+  height: 128rpx;
+  position: relative;
+}
+.colorBox .colorList scroll-view{
+  position: absolute;
+  height: 60rpx;
+  top: 34rpx;
+  width: 468rpx;
+  overflow: auto;
+  left: 100rpx;
+  white-space: nowrap;
+}
+.sizeBox .sizeList scroll-view{
+  position: absolute;
+  height: 88rpx;
+  top: 20rpx;
+  width: 468rpx;
+  overflow: auto;
+  left: 100rpx;
+  white-space: nowrap;
+}
+.colorBox .colorList scroll-view view{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin: 0 29rpx;
+  display: inline-block;
+  text-align: center;
+  position: relative
+}
+.colorBox .colorList scroll-view view image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  display: none;
+}
+.colorBox .colorList scroll-view view.cur image{
+  display: block;
+
+}
+.sizeBox .sizeList scroll-view text{
+  width: 88rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 50%;
+  margin: 0 16rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  color: #E6E6E6;
+  box-sizing: border-box;
+  border: 2rpx solid #E6E6E6;
+}
+.sizeBox .sizeList scroll-view text.cur{
+  border: 2rpx solid #F39800;
+  color: #F39800;
+}
+.leftBtn{
+  position: absolute;
+  left: 40rpx;
+  height: 40rpx;
+  width: 40rpx;
+  top: 44rpx;
+}
+.leftBtn image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.rightBtn{
+  position: absolute;
+  right: 40rpx;
+  height: 40rpx;
+  width: 40rpx;
+  top: 44rpx;
+}
+.rightBtn image{
+  width: 40rpx;
+  height: 40rpx;
 }
 .numBox text{
   font-size: 32rpx;

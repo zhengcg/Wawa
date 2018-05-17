@@ -47,6 +47,7 @@ height: 90rpx;
 .flex-cell{
   flex: 1;
 }
+
 .pickers{
   position: absolute;
   z-index: 1000;

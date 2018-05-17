@@ -392,7 +392,7 @@ Page({
             }
           })
 
-        } else if (res.data.code == 402) {
+        } else if (res.data.code == 421) {
           wx.showModal({
             title: '温馨提示',
             content: '同一时间不能重复添加',

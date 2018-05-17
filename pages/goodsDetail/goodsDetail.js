@@ -15,7 +15,13 @@ Page({
     detail:{},
     main:0,
     num:1,
-    conNum:0
+    conNum:0,
+    goodscolor:[],
+    goodssize:[],
+    size:"0",
+    color:"0",
+    colorId:'',
+    sizeId:''
 
   },
 
@@ -29,6 +35,24 @@ Page({
       })
     }
     this.checkToken()
+
+  },
+  selectColor:function(e){
+    var index = e.currentTarget.dataset.index;
+    var id = e.currentTarget.dataset.id;
+    this.setData({
+      color:index,
+      colorId:id
+    })
+
+  },
+  selectSize: function (e) {
+    var index = e.currentTarget.dataset.index;
+    var id = e.currentTarget.dataset.id;
+    this.setData({
+      size: index,
+      sizeId: id
+    })
 
   },
   checkToken: function () {
@@ -234,7 +258,9 @@ Page({
         if (res.data.code == 200) {
           self.setData({
             detail:res.data.data,
-            conNum: res.data.data.score
+            conNum: res.data.data.score,
+            goodscolor: res.data.data.attr[0].attrData,
+            goodssize: res.data.data.attr[1].attrData
           })
 
 
@@ -292,7 +318,7 @@ Page({
         url: api + "Goods/addOrder",
         method: 'POST',
         header: header,
-        data: { session_3rd: wx.getStorageSync('token'), goods_id: self.data.goodsId, address_id: self.data.isDefaultAdd.address_id,amount:self.data.num },
+        data: { session_3rd: wx.getStorageSync('token'), goods_id: self.data.goodsId, address_id: self.data.isDefaultAdd.address_id,amount:self.data.num,attrs:self.data.colorId+","+self.data.sizeId },
         success: function (res) {
           try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }
           if (res.data.code == 200) {

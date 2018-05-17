@@ -1,11 +1,11 @@
 {
   "pages":[ 
   
-   "pages/goodsDetail/goodsDetail",
+   
     "pages/login/login",
     "pages/cl/cl",
     "pages/carmea/carmea",
-    
+    "pages/goodsDetail/goodsDetail",
     "pages/exchangeList/exchangeList",
     "pages/getCoinList/getCoinList",
     "pages/myCoin/myCoin",
@@ -14,7 +14,7 @@
     "pages/addAddress/addAddress",
     "pages/receiveAd/receiveAd",
     "pages/receiveAd1/receiveAd1",
-    
+    "pages/drugsDetail/drugsDetail",
     "pages/medicationRecord/medicationRecord",
     "pages/medicationRecord1/medicationRecord1",
     "pages/temperatureDetection/temperatureDetection",
