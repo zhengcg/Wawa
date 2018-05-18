@@ -1,0 +1,17 @@
+<view class='container'>
+<scroll-view scroll-y="true">
+  <block wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class='title'>{{item.do_time}}</view> 
+    <view class='body'>
+       <view wx:for="{{item.imgs}}" wx:key="{{index}}" wx:for-item="itemName" class='imgBoxYY'>
+        <image src='{{itemName}}' bindtap='previewImg' data-url='{{itemName}}'  data-id="{{item.id}}"/>
+      </view> 
+    </view>
+   </block>
+  </scroll-view>
+</view>
+
+<view style='height:222rpx;'></view>
+<view class='footer'>
+  <button bindtap='submit'>返回</button>
+</view>

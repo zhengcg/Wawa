@@ -1,0 +1,21 @@
+<view class='listBox'>
+  <view class="twj">
+    <text>注射时间</text>{{date}}
+
+  </view>
+  <view>
+    <text>注射地点</text>
+    {{place}}
+  </view>
+</view>
+
+<view class='sm'>
+<view class='tit'>{{detail.title}} {{detail.nums}}</view>
+<view style='text-indent:70rpx;'>{{detail.reason}}</view>
+<view style='text-indent:70rpx;'>{{detail.principle}}</view>
+<view style='text-indent:70rpx;'>{{detail.method}}</view>
+</view>
+<view style='height:222rpx;'></view>
+<view class='footer'>
+  <button bindtap='submit'>返回</button>
+</view>

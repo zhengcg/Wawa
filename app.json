@@ -4,6 +4,9 @@
     
     "pages/login/login",
     "pages/hospitalDetail/hospitalDetail",
+    "pages/departmentDetail/departmentDetail",
+    "pages/physicalDetail/physicalDetail",
+    "pages/vaccineDetail/vaccineDetail",
     "pages/cl/cl",
     "pages/carmea/carmea",
     "pages/goodsDetail/goodsDetail",

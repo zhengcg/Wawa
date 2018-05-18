@@ -3,7 +3,7 @@
   <text class='{{tabCur=="2"?"cur":"default"}}' bindtap='changeTab' data-index="2">影像报告</text>
   <text class='{{tabCur=="3"?"cur":"default"}}' bindtap='changeTab' data-index="3">处方单</text>
   <text class='{{tabCur=="4"?"cur":"default"}}' bindtap='changeTab' data-index="4">病例记录</text>
-   <text class='{{tabCur=="5"?"cur":"default"}}' bindtap='changeTab' data-index="5">用药记录</text> 
+   <!-- <text class='{{tabCur=="5"?"cur":"default"}}' bindtap='changeTab' data-index="5">用药记录</text>  -->
   <text class='{{tabCur=="6"?"cur":"default"}}' bindtap='changeTab' data-index="6">医疗费用</text>
 </scroll-view>
 

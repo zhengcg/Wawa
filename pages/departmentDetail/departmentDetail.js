@@ -15,17 +15,17 @@ Page({
     mid: '',
     mni_time: '',
     max_time: '',
-    title:'',
+    title: '',
     page: 1,
     number: 15,
-    listHYD:[],
-    listYXBG:[],
-    listBLJL:[],
-    listYYJL:[],
-    listYLFY:[],
-    listCFD:[]
+    listHYD: [],
+    listYXBG: [],
+    listBLJL: [],
+    listYYJL: [],
+    listYLFY: [],
+    listCFD: []
 
-  
+
   },
 
   /**
@@ -37,8 +37,7 @@ Page({
         id: options.id,
         mid: options.mid,
         mni_time: options.mni_time,
-        max_time: options.max_time,
-        title:options.title
+        max_time: options.max_time
       })
     }
     try {
@@ -48,7 +47,7 @@ Page({
       console.error('getSystemInfoSync failed!');
     }
     this.checkToken()
-  
+
   },
   changeTab: function (e) {
     this.setData({
@@ -60,7 +59,7 @@ Page({
       listBLJL: [],
       listYYJL: [],
       listYLFY: [],
-      listCFD: []     
+      listCFD: []
     })
     if (this.data.tabCur == "1") {
       this.getHYD()
@@ -79,7 +78,7 @@ Page({
   checkToken: function () {
     if (wx.getStorageSync('token')) {
       this.getHYD()
-  
+
 
 
     } else {
@@ -100,12 +99,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
   submit: function () {
     var self = this
     wx.redirectTo({
-      url: '../hospital/hospital?mid=' + self.data.mid + '&mni_time=' + self.data.mni_time + '&max_time=' + self.data.max_time
+      url: '../department/department?mid=' + self.data.mid + '&mni_time=' + self.data.mni_time + '&max_time=' + self.data.max_time
     })
 
   },
@@ -120,9 +119,9 @@ Page({
     var id = e.currentTarget.dataset.id;
     var arr = [];
     var list;
-    if (this.data.tabCur=="1"){
+    if (this.data.tabCur == "1") {
       list = this.data.listHYD
-    } else if (this.data.tabCur == "2"){
+    } else if (this.data.tabCur == "2") {
       list = this.data.listYXBG
     } else if (this.data.tabCur == "3") {
       list = this.data.listCFD
@@ -152,7 +151,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzCf', //仅为示例，并非真实的接口地址
       data: {
-        h_id:self.data.id,
+        h_son_id: self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -214,7 +213,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzHy', //仅为示例，并非真实的接口地址
       data: {
-        h_id: self.data.id,
+        h_son_id: self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -276,7 +275,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzYx', //仅为示例，并非真实的接口地址
       data: {
-        h_id: self.data.id,
+        h_son_id: self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -338,7 +337,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzBl', //仅为示例，并非真实的接口地址
       data: {
-        h_id: self.data.id,
+        h_son_id: self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -401,7 +400,7 @@ Page({
       url: api + 'Coreout/getYy', //仅为示例，并非真实的接口地址
       data: {
         m_id: self.data.mid,
-        h_name:self.data.title,
+        h_name: self.data.title,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -463,7 +462,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzFy', //仅为示例，并非真实的接口地址
       data: {
-        h_id:self.data.id,
+        h_son_id: self.data.id,
         m_id: self.data.mid,
         session_3rd: wx.getStorageSync('token'),
         mni_time: self.data.mni_time,
@@ -532,37 +531,37 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
     if (this.data.tabCur == "1") {
-       this.getHYD()
+      this.getHYD()
     } else if (this.data.tabCur == "2") {
       this.getYXBG()
     } else if (this.data.tabCur == "3") {
@@ -572,13 +571,13 @@ Page({
     } else if (this.data.tabCur == "5") {
       this.getYYJL()
     }
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
