@@ -3,7 +3,7 @@
     <text>注射时间</text>{{date}}
 
   </view>
-  <view>
+  <view class='zsdd'>
     <text>注射地点</text>
     {{place}}
   </view>

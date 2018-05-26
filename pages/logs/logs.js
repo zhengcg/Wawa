@@ -32,9 +32,13 @@ Page({
         tabCur: options.tabCur
       })
     }
-    
-    
-   
+
+    this.setData({
+      endDate: this.formatDate(new Date()),
+      dateEnd: this.formatDate(new Date()),
+      dateStart: this.lastDate(new Date())
+    })  
+    this.checkToken(); 
 
   },
   setClass() {
@@ -101,12 +105,7 @@ Page({
    */
   onReady: function () {
    
-    this.setData({
-      
-      endDate: this.formatDate(new Date()),
-      dateEnd: this.formatDate(new Date()),
-      dateStart: this.lastDate(new Date())
-    })
+ 
   },
   formatDate: function (now) {
     var year = now.getFullYear();
@@ -165,8 +164,8 @@ Page({
             showMember: res.data.data[0]
           })
           _this.setClass();
-          _this.getDoc(res.data.data[0].id)
-          _this.getYc(res.data.data[0].id)
+          // _this.getDoc(res.data.data[0].id)
+          // _this.getYc(res.data.data[0].id)
 
         } else if (res.data.code == 401) {
           wx.clearStorageSync()
@@ -317,7 +316,6 @@ Page({
   // 切换家属
   changeJs: function (e) {
     var self = this;
-    console.log(e)
     var index = e.currentTarget.dataset.index;
     this.setData({
       index: index
@@ -359,8 +357,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.checkToken();
-    
     
     
   },

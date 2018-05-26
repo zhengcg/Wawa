@@ -47,7 +47,7 @@ Page({
     } else {
       wx.showModal({
         title: '提示',
-        content: '登录过期了，请重新登录！',
+        content: '请先授权登陆后在操作',
         showCancel:false,
         success: function (res) {         
             wx.navigateTo({

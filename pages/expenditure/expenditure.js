@@ -15,7 +15,8 @@ Page({
     name: '',
     list: [],
     mni_time: '',
-    max_time: ''
+    max_time: '',
+    total:0
 
   },
 
@@ -83,18 +84,23 @@ Page({
         if (re.data.code == 200) {
           var flag=false
           var arr=[]
+          var total=0
 
           for (var i = 0; i < re.data.data.length;i++){
             if (re.data.data[i].data > 0) {
               flag = true
             }
             var obj={
-              name: re.data.data[i].name + "¥ " + parseFloat(re.data.data[i].data),
+              name: re.data.data[i].name + "¥ " + parseFloat(re.data.data[i].data)+".00",
               data: parseFloat(re.data.data[i].data)
             }
+            total += parseFloat(re.data.data[i].data)
             arr.push(obj)
             
           }
+          self.setData({
+            total:total+".00"
+          })
 
           if (flag && arr.length == re.data.data.length){
             

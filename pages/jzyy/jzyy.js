@@ -262,7 +262,8 @@ Page({
       url: api + "Corein/saveJz",
       method: 'POST',
       header: header,
-      data: { session_3rd: wx.getStorageSync('token'), jz_id: self.data.jz_id, h_id: e.currentTarget.dataset.id },
+      data: {
+        session_3rd: wx.getStorageSync('token'), jz_id: self.data.jz_id, h_id: e.currentTarget.dataset.id, h_son_id:1},
       success: function (res) {
         try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }
         if (res.data.code == 200) {

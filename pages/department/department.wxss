@@ -1,1 +1,56 @@
-/* pages/department/department.wxss */
+.list{
+  margin-bottom: 30rpx;
+  border: 1rpx solid #E5E5E5;
+  box-shadow: 0 2rpx 6rpx 0 rgba(0,0,0,0.15);
+  border-radius: 16rpx;
+  padding: 20rpx 0;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  /* justify-content:space-around; */
+  align-items:center;
+  font-size: 28rpx;
+  color: #111;
+  position: relative;
+  overflow: hidden;
+}
+.red{
+  color: #F5A623;
+  height: 40rpx;
+  overflow: hidden;
+}
+.delete{
+  width: 100rpx;
+  text-align: center;
+}
+.search{
+  width: 100rpx;
+  text-align: center;
+  background: #F6F8FC;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+}
+.content{
+  text-align: left;
+  width: 486rpx;
+  box-sizing: border-box;
+  padding:  0 20rpx;
+}
+.content text{
+  float: left;
+}
+.content>view{
+  line-height: 40rpx;
+}
+.content>view view{
+  margin-left: 90rpx;
+}
+.list image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.search image{
+  margin-top: 80rpx;
+}

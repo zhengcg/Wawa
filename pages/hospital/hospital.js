@@ -35,8 +35,9 @@ Page({
     var self = this;
     var id = e.currentTarget.dataset.id;
     var title=e.currentTarget.dataset.title;
+    var time = e.currentTarget.dataset.time;
     wx.redirectTo({
-      url: '../hospitalDetail/hospitalDetail?id=' + id + '&mid=' + self.data.mid + '&mni_time=' + self.data.mni_time + '&max_time=' + self.data.max_time +'&title='+title,
+      url: '../hospitalDetail/hospitalDetail?id=' + id + '&mid=' + self.data.mid + '&mni_time=' + self.data.mni_time + '&max_time=' + self.data.max_time +'&title='+title+'&time='+time
     })
 
   },

@@ -17,7 +17,8 @@ Page({
     "title":"",
     "range":"",
     mni_time: '',
-    max_time: ''
+    max_time: '',
+    content:''
 
   },
 
@@ -89,17 +90,18 @@ Page({
         if (res.data.code == 200) {
           var arr = [];
           var temArr = [];
-          if (res.data.data.length > 0) {
+          if (res.data.data.data.length > 0) {
 
-            for (var i = 0; i < res.data.data.length; i++) {
-              arr.push(res.data.data[i].do_time);
-              temArr.push(parseFloat(res.data.data[i].result));
+            for (var i = 0; i < res.data.data.data.length; i++) {
+              arr.push(res.data.data.data[i].do_time);
+              temArr.push(parseFloat(res.data.data.data[i].result));
             }
             _this.setData({
               arr: arr,
               temArr: temArr,
               isCanvas: false,
-              range: res.data.data[0].range
+              range: res.data.data.data[0].range,
+              content: res.data.data.data.data_info.content
             })
             _this.drawLine()
 

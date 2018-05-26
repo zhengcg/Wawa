@@ -1,7 +1,10 @@
 
     <camera device-position="back" flash="off" binderror="error"  class='carmea'>
-    <cover-image class='line' src='../../images/carmea.png'></cover-image>
+    <cover-image class='line' src='../../images/carmea.png' hidden='{{isShu}}'></cover-image>
+    <cover-image class='line1' src='../../images/carmea1.png' hidden='{{!isShu}}'></cover-image>
     <cover-image class='pai'  bindtap="takePhoto" src='../../images/pai.png'></cover-image>
+    <cover-image class='btn'  bindtap="changeImg" src='../../images/btn1.png'></cover-image>
+    <cover-image class='btn1'  bindtap="changeImg1" src='../../images/btn2.png'></cover-image>
 
     </camera>
 

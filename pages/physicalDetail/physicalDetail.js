@@ -11,6 +11,7 @@ Page({
     page: 1,
     number: 5,
     list: [],
+    time:'',
     mni_time: '',
     max_time: '',
     id:''
@@ -63,16 +64,10 @@ Page({
 
   },
   previewImg: function (e) {
-    var id = e.currentTarget.dataset.id;
-    var arr = [];
-    for (var i = 0; i < this.data.list.length; i++) {
-      if (this.data.list[i].id == id) {
-        arr = this.data.list[i].imgs
-      }
-    }
+    var self=this;
     wx.previewImage({
       current: e.currentTarget.dataset.url, // 当前显示图片的http链接
-      urls: arr // 需要预览的图片http链接列表
+      urls: self.data.list // 需要预览的图片http链接列表
     })
 
   },
@@ -86,38 +81,26 @@ Page({
       console.log("当前微信版本不支持")
     }
     wx.request({
-      url: api + 'CoreOut/getTj', //仅为示例，并非真实的接口地址
+      url: api + 'coreOut/getTjDetail', //仅为示例，并非真实的接口地址
       data: {
         id:self.data.id,
-        number: self.data.number,
-        page: self.data.page,
+        // number: self.data.number,
+        // page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
-        m_id: parseInt(self.data.mid),
-        mni_time: self.data.mni_time,
-        max_time: self.data.max_time
+        // m_id: parseInt(self.data.mid),
+        // mni_time: self.data.mni_time,
+        // max_time: self.data.max_time
       },
       method: 'GET',
       success: function (res) {
         try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }
         if (res.data.code == 200) {
-          if (res.data.data.length) {
-            for (var i = 0; i < res.data.data.length; i++) {
-              res.data.data[i].imgs = (res.data.data[i].imgs).split(",")
-
-              res.data.data[i].do_time = res.data.data[i].do_time.slice(0, 10)
-
-            }
+         
             self.setData({
-              page: self.data.page + 1,
-              list: self.data.list.concat(res.data.data),
+              time: res.data.data.do_time.slice(0, 10),
+              list: res.data.data.imgs.split(",")
             })
-          } else {
-            wx.showToast({
-              title: '没有了！',
-              icon: 'fail',
-              duration: 2000
-            })
-          }
+           
         } else if (res.data.code == 401) {
           wx.clearStorageSync()
           wx.showModal({

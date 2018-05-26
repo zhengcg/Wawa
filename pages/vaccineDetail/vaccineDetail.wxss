@@ -1,7 +1,7 @@
 .footer{
   position: fixed;
   height: 200rpx;
-  bottom: 22rpx;
+  bottom: 0rpx;
   width: 100%;
   left: 0;
   background: #fff;
@@ -86,4 +86,9 @@ button::after{
 .tit{
   font-size: 32rpx;
   color: #666666;
+}
+.zsdd{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

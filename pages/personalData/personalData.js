@@ -120,7 +120,7 @@ Page({
             weight:res.data.data.weight,
             bloodIndex:res.data.data.blood_type-1,
             occupationIndex: res.data.data.occupation-1,
-            area:  res.data.data.area.split(",")
+            area: res.data.data.area?res.data.data.area.split(","):[]
 
           })
 

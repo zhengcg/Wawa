@@ -1,7 +1,7 @@
 .footer{
   position: fixed;
   height: 200rpx;
-  bottom: 22rpx;
+  bottom: 0rpx;
   width: 100%;
   left: 0;
   background: #fff;
@@ -24,17 +24,22 @@
   padding: 0 40rpx;
 }
 .listBox view{
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: #111111;
-  padding: 40rpx 0;
+  padding: 30rpx 0;
   border-bottom: 1rpx solid #E5E5E5;
+  box-sizing: border-box;
+  padding-left: 150rpx;
+  position: relative
 
 }
 .listBox view text{
   font-size: 28rpx;
   color: #666666;
   display: inline-block;
-  width: 100rpx;
+  width: 150rpx;
+  position: absolute;
+  left: 0;
 }
 .formBox{
   padding: 0 40rpx;

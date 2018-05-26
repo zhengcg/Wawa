@@ -10,6 +10,7 @@ Page({
   data: {
     id:'',
     info:[],
+    jbxx:{},
     imgs:[],
     jz_id:"",
     img:'',
@@ -30,6 +31,35 @@ Page({
       mid: options.mid
     })
     this.checkToken()
+
+  },
+  changeName:function(e){
+    this.data.jbxx.name=e.detail.value;
+    this.setData({
+      jbxx:this.data.jbxx
+    })
+    console.log(this.data.jbxx)
+
+  },
+  changeAge: function (e) {
+    this.data.jbxx.age = e.detail.value;
+    this.setData({
+      jbxx: this.data.jbxx
+    })
+
+  },
+  changeSex: function (e) {
+    this.data.jbxx.sex = (e.detail.value=="男")?1:0;
+    this.setData({
+      jbxx: this.data.jbxx
+    })
+
+  },
+  changeType: function (e) {
+    this.data.jbxx.check_type = e.detail.value;
+    this.setData({
+      jbxx: this.data.jbxx
+    })
 
   },
   uploadImg:function(){
@@ -202,7 +232,8 @@ Page({
         try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }
         if (res.data.code == 200) {
           _this.setData({
-            "info": res.data.data
+            "info": res.data.data.data,
+            "jbxx": res.data.data.data_info
           })
 
         } else if (res.data.code == 401) {
@@ -253,14 +284,23 @@ Page({
         data: { 
           session_3rd: wx.getStorageSync('token'),
            id: _this.data.id,
-           data:JSON.stringify(_this.data.info) 
+           data:JSON.stringify(_this.data.info),
+           data_info: JSON.stringify(_this.data.jbxx)
            },
         success: function (res) {
           try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }
           if (res.data.code == 200) {
-            wx.redirectTo({
-              url: '../uploadHYD/uploadHYD?imgs=' + _this.data.imgs.toString() + '&jz_id=' + _this.data.jz_id
+            wx.showModal({
+              title: '提示',
+              content: '为确保数据分析准确，请您确认化验单用户与当前选定用户为同一人',
+              showCancel: false,
+              success: function (res) {
+                wx.redirectTo({
+                  url: '../uploadHYD/uploadHYD?imgs=' + _this.data.imgs.toString() + '&jz_id=' + _this.data.jz_id
+                })
+              }
             })
+            
             
 
           } else if (res.data.code == 401) {
@@ -277,6 +317,7 @@ Page({
             })
 
           } else {
+            
             wx.showToast({
               title: res.data.msg,
               icon: 'fail',

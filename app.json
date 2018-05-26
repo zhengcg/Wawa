@@ -1,8 +1,7 @@
 {
-  "pages":[ 
-  
-    
-    "pages/login/login",
+  "pages":[  
+    "pages/index/index",
+     "pages/login/login",
     "pages/hospitalDetail/hospitalDetail",
     "pages/departmentDetail/departmentDetail",
     "pages/physicalDetail/physicalDetail",
@@ -22,13 +21,13 @@
     "pages/medicationRecord/medicationRecord",
     "pages/medicationRecord1/medicationRecord1",
     "pages/temperatureDetection/temperatureDetection",
-    
+    "pages/hospital/hospital",
     "pages/personalData/personalData",
     "pages/addMembers/addMembers",
-    "pages/index/index",
+    "pages/xieyi/xieyi",
     "pages/uploadReport/uploadReport",
     "pages/memberOfFamily/memberOfFamily",
-    "pages/hospital/hospital",
+    
     "pages/department/department",
     "pages/drugs/drugs",
     "pages/temperature/temperature",

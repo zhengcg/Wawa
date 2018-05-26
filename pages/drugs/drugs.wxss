@@ -1,1 +1,24 @@
 /* pages/drugs/drugs.wxss */
+image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.table{
+  border: none!important;
+}
+.tr{
+  border-bottom: 1rpx solid #EAEDF3;
+}
+.th{
+  border: none!important;
+  font-size: 28rpx;
+  color: #666;
+  padding: 24rpx 0;
+}
+.td{
+  border: none!important;
+  font-size: 28rpx;
+  color: #111;
+  padding: 24rpx 0!important;
+}

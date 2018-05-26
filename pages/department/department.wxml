@@ -1,4 +1,4 @@
-<view style='padding:40rpx 32rpx'>
+<!-- <view style='padding:40rpx 32rpx'>
 <scroll-view scroll-y="true">
   <view id="panel" class="flex-column">
     <view class="flex-cell flex-row">
@@ -8,9 +8,23 @@
     </view>
    <view class="flex-row flex-cell" wx:for="{{list}}" wx:key="{{item.id}}">
       <text class="flex-cell flex-row" style='-moz-flex-grow: 2;-webkit-flex-grow: 2;flex-grow: 2;'>{{item.do_time}}</text>
-      <text class="flex-cell flex-row" style='-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;' bindtap='gotoDetail' data-id="{{item.h_son_id}}">{{item.title}}</text>
+      <text class="flex-cell flex-row" style='-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;color:#18BAFF' bindtap='gotoDetail' data-id="{{item.h_son_id}}">{{item.title}}</text>
       <text class="flex-cell flex-row trR" data-id="{{item.id}}" data-index="{{index}}" bindtap='removeFn' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'></text>
     </view>
   </view> 
   </scroll-view>
+</view> -->
+
+<view style='padding:32rpx;'>
+<scroll-view scroll-y="true">
+  <view class='list clearfix' wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class='delete' data-id="{{item.id}}" data-index="{{index}}" bindtap='removeFn'><image src='../../images/icon31.png'></image></view>
+    <view class='content'>
+      <view><text>时间：</text><view>{{item.do_time}}</view></view>
+      <view><text>科室：</text><view class='red'>{{item.title}}</view></view>
+      <view><text>医院：</text><view style='height:80rpx;over-flow:hidden;'>{{item.h_title}}</view></view>
+    </view>
+    <view class='search' bindtap='gotoDetail' data-id="{{item.id}}" data-title="{{item.h_title}}"><image src='../../images/icon37.png'></image></view>
+  </view>
+</scroll-view>
 </view>

@@ -27,10 +27,11 @@ Page({
   onLoad: function (options) {
 
     this.setData({
-      id: options.id,
+      id: options.yid,
       mid: options.mid,
       mni_time: options.mni_time,
-      max_time: options.max_time
+      max_time: options.max_time,
+      yid:options.id
     })
 
     this.checkToken()

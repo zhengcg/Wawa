@@ -218,6 +218,7 @@ Page({
     this.setData({
       gydd:e.detail.value
     })
+    this.getYYMX()
 
   },
   removeYYMM:function(e){
@@ -300,6 +301,12 @@ Page({
     catch (err) {
       console.log("当前微信版本不支持")
     }
+    var h_name="";
+    if (_this.data.isYS==2){
+      h_name = _this.data.gyyyTitle
+    }else{
+      h_name = _this.data.gydd
+    }
     wx.request({
       url: api + "Coreout/getYy",
       method: 'GET',
@@ -308,7 +315,8 @@ Page({
         session_3rd: wx.getStorageSync('token'),
          m_id:_this.data.members[_this.data.index].id,
          mni_time:_this.data.date,
-         max_time: _this.data.date
+         max_time: _this.data.date,
+         h_name:h_name
        },
       success: function (res) {
         try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }

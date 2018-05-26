@@ -237,7 +237,8 @@ Page({
         session_3rd: wx.getStorageSync('token'),
         m_id: _this.data.members[_this.data.index].id,
         mni_time: _this.data.date,
-        max_time: _this.data.date
+        max_time: _this.data.date,
+        h_name: _this.data.gyyyTitle
       },
       success: function (res) {
         try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }

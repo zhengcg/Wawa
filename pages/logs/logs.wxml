@@ -49,7 +49,7 @@
 
 <view class='logBox' hidden='{{tabCur!=="1"}}'>
   <navigator url="/pages/hospital/hospital?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}">去过{{list[0].num}}次医院</navigator>
-  <navigator url="/pages/department/department?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}">到过{{list[1].num}}个科室</navigator>
+  <navigator url="/pages/department/department?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}">到过{{list[1].num}}次科室</navigator>
   <navigator url="/pages/drugs/drugs?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}">使用过{{list[2].num}}种药品</navigator>
   <navigator url="/pages/temperature/temperature?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}">测过{{list[3].num}}次体温</navigator>
   <navigator url="/pages/vaccine/vaccine?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}">打过{{list[5].num}}次疫苗</navigator>
@@ -67,9 +67,9 @@
   </scroll-view>
    <view class='dataList'  hidden='{{jkTab!=="1"}}'>
     <navigator url='/pages/hy/hy?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}'><text>原始数据</text></navigator>
-    <navigator url='/pages/list/list?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=normal'><text>正常数据</text>{{znum}}</navigator>
-    <navigator url='/pages/list/list?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=current_unnormal'><text>当前异常</text>{{dnum}}</navigator>
-       <navigator url='/pages/list/list?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=unnormal'><text>历史异常</text>{{lnum}}</navigator>
+    <navigator url='/pages/cl/cl?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=normal'><text>正常数据</text>{{znum}}</navigator>
+    <navigator url='/pages/lcl/cl?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=current_unnormal'><text>当前异常</text>{{dnum}}</navigator>
+       <navigator url='/pages/cl/cl?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=unnormal'><text>历史异常</text>{{lnum}}</navigator>
     <!-- <navigator url='/pages/hc/hc?mid={{showMember.id}}&title={{item.title_cn}}&mni_time={{dateStart}}&max_time={{dateEnd}}' wx:for="{{yc}}" wx:key="{{index}}"><text>{{item.title_cn}}</text>{{item.num}}次异常</navigator> -->
   </view>
   <view class='dataList'  hidden='{{jkTab!=="2"}}'>

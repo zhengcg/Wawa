@@ -1,1 +1,47 @@
 /* pages/login/login.wxss */
+.tu{
+  text-align: center;
+  padding-top: 150rpx;
+}
+.tu image{
+  height: 382rpx;
+}
+.zi{
+  margin-top: 40rpx;
+  text-align: center;
+  
+}
+.zi image{
+  height: 150rpx;
+}
+.text{
+  font-size: 24rpx;
+  color: #111111;
+  text-align: center
+}
+.text navigator{
+  display: inline;
+  color: #F5AB00;
+}
+button{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 540rpx;
+  margin: 70rpx auto 30rpx auto;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  background: #F5AB00;
+  border-radius: 12rpx;
+}
+button image{
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 50rpx;
+  vertical-align: middle;
+}
+button text{
+  vertical-align: middle;
+}
+button::after{
+  border: 0;
+}

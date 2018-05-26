@@ -1,15 +1,21 @@
 <view class='listBox'>
-  <view><text>名称</text>{{info.title}}</view>
-  <view><text>厂家</text>{{info.vender}}</view>
-  <view><text>剂型</text>{{info.dosage}}</view>
-  <view><text>规格</text>{{info.spec}}</view>
+  <view><text>购药地点：</text>{{info.place_name}}</view>
+  <view><text>购药时间：</text>{{info.do_time}}</view>
+  <view><text>名称：</text>{{info.title}}</view>
+  <view><text>厂家：</text>{{info.vender}}</view>
+  <view><text>剂型：</text>{{info.dosage}}</view>
+  <view><text>规格：</text>{{info.spec}}</view>
   <view>
     <text>单价：</text>
-    {{info.price}}
+    {{info.price}} 元
   </view>
   <view>
     <text>数量：</text>
     {{info.amount}}
+  </view>
+  <view>
+    <text>总计：</text>
+    {{info.amount*info.price}} 元
   </view>
 </view>
 <view style='height:222rpx;'></view>

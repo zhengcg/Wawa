@@ -1,0 +1,26 @@
+/* pages/xieyi/xieyi.wxss */
+.xieyi{
+  padding: 40rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+.title{
+  font-size: 32rpx;
+  color: #000;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+view{
+  margin-bottom: 20rpx;
+}
+text{
+  color: #000;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.text1{
+  color: #000;
+  font-weight: bolder;
+
+}

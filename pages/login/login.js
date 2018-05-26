@@ -53,7 +53,8 @@ Page({
         }
       }
     })
-    this.checkToken();
+    
+    // this.checkToken();
   },
   bindGetUserInfo: function (e) {
     var _this=this;
@@ -66,12 +67,13 @@ Page({
       "county": e.detail.userInfo.country
 
     })
-    _this.sendLogin(sendData)
+    _this.registerFn()
   },
   checkToken: function () {
     var _this = this;
     wx.checkSession({
       success: function () {
+         _this.registerFn()
         if (!wx.getStorageSync('token')) {
           _this.registerFn()
         } else {
@@ -83,7 +85,7 @@ Page({
 
       },
       fail: function () {
-        _this.registerFn()
+        // _this.bindGetUserInfo()
       }
     })
 

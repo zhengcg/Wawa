@@ -11,7 +11,8 @@ Page({
     id: '',
     mid: '',
     mni_time: '',
-    max_time: ''
+    max_time: '',
+    address:''
 
   },
 
@@ -24,7 +25,8 @@ Page({
         id:options.id,
         mid: options.mid,
         mni_time: options.mni_time,
-        max_time: options.max_time
+        max_time: options.max_time,
+        address:options.address
       })
     }
 

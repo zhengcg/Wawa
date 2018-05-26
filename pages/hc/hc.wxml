@@ -5,3 +5,9 @@
 <view class='rangeBox'>
   正常范围:{{range}}
 </view>
+<view class='rangeBox'>
+  参数说明:
+  <view>
+  {{content}}
+  </view>
+</view>

@@ -5,7 +5,7 @@
     <view></view>
     </picker>
   </view>
-  <view>
+  <view class='zsdd'>
     <text>注射地点</text>
     <input type='text' bindinput='changePlace' value='{{place}}'></input>
   </view>

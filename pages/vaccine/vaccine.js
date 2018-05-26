@@ -34,8 +34,9 @@ Page({
   gotoDetail: function (e) {
     var self = this;
     var id = e.currentTarget.dataset.id;
+    var yid = e.currentTarget.dataset.yid;
     wx.redirectTo({
-      url: '../vaccineDetail/vaccineDetail?id=' + id + '&mid=' + self.data.mid + '&mni_time=' + self.data.mni_time + '&max_time=' + self.data.max_time
+      url: '../vaccineDetail/vaccineDetail?id=' + id + '&mid=' + self.data.mid + '&mni_time=' + self.data.mni_time + '&max_time=' + self.data.max_time+'&yid='+yid
     })
 
   },

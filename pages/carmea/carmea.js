@@ -11,7 +11,9 @@ Page({
     src:'',
     imgs:"",
     jz_id:'',
-    mid:''
+    mid:'',
+    isShu:false,
+    text:"单列化验单"
     
   },
 
@@ -34,6 +36,18 @@ Page({
       }
     })
     
+  },
+  changeImg(){
+    var self = this;
+    self.setData({
+      isShu: false
+    })
+  },
+  changeImg1() {
+    var self = this;
+    self.setData({
+      isShu: true
+    })
   },
   takePhoto() {
     var _this=this;

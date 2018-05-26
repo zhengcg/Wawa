@@ -10,7 +10,8 @@ Page({
     "yc": [],
     dateStart: '',
     dateEnd: '',
-    mid:''
+    mid:'',
+    type:''
   
   },
 

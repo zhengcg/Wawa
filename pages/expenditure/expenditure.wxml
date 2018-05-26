@@ -1,2 +1,3 @@
-<view class='title'>{{mni_time}}至{{max_time}} {{name}}医疗支出明细</view>
+<view class='title' style='color:#111'>{{mni_time}}至{{max_time}} {{name}}医疗总计:{{total}}<view>支出明细:</view></view>
 <canvas canvas-id="pieCanvas" class="canvas" style="height:300px;width:100%" ></canvas>
+

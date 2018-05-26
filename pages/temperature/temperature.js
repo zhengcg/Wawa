@@ -154,6 +154,9 @@ Page({
         try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }
         if (res.data.code == 200) {
           if (res.data.data.length) {
+            for (var i = 0; i < res.data.data.length; i++) {
+              res.data.data[i].do_time = res.data.data[i].do_time.slice(0, 16)
+            }
 
             self.setData({
               page: self.data.page + 1,

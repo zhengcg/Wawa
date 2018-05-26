@@ -237,3 +237,7 @@ height: 90rpx;
   display: inline-block;
   margin-right: 40rpx;
 }
+.gjzc{
+  padding: 40rpx;
+  font-size: 32rpx;
+}

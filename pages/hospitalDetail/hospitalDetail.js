@@ -23,7 +23,9 @@ Page({
     listBLJL:[],
     listYYJL:[],
     listYLFY:[],
-    listCFD:[]
+    listCFD:[],
+    total: 0,
+    time:''
 
   
   },
@@ -38,7 +40,8 @@ Page({
         mid: options.mid,
         mni_time: options.mni_time,
         max_time: options.max_time,
-        title:options.title
+        title:options.title,
+        time:options.time
       })
     }
     try {
@@ -152,7 +155,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzCf', //仅为示例，并非真实的接口地址
       data: {
-        h_id:self.data.id,
+        jz_id:self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -214,7 +217,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzHy', //仅为示例，并非真实的接口地址
       data: {
-        h_id: self.data.id,
+        jz_id: self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -276,7 +279,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzYx', //仅为示例，并非真实的接口地址
       data: {
-        h_id: self.data.id,
+        jz_id: self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -338,7 +341,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzBl', //仅为示例，并非真实的接口地址
       data: {
-        h_id: self.data.id,
+        jz_id: self.data.id,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
@@ -398,15 +401,17 @@ Page({
       console.log("当前微信版本不支持")
     }
     wx.request({
-      url: api + 'Coreout/getYy', //仅为示例，并非真实的接口地址
+      url: api + 'coreOut/getYy', //仅为示例，并非真实的接口地址
       data: {
         m_id: self.data.mid,
+        jz_id: self.data.id,
         h_name:self.data.title,
         number: self.data.number,
         page: self.data.page,
         session_3rd: wx.getStorageSync('token'),
-        mni_time: self.data.mni_time,
-        max_time: self.data.max_time
+        min_time: self.data.mni_time,
+        max_time: self.data.max_time,
+
       },
       method: 'GET',
       success: function (res) {
@@ -463,7 +468,7 @@ Page({
     wx.request({
       url: api + 'Coreout/getJzFy', //仅为示例，并非真实的接口地址
       data: {
-        h_id:self.data.id,
+        jz_id:self.data.id,
         m_id: self.data.mid,
         session_3rd: wx.getStorageSync('token'),
         mni_time: self.data.mni_time,
@@ -475,18 +480,23 @@ Page({
         if (re.data.code == 200) {
           var flag = false
           var arr = []
+          var total = 0
 
           for (var i = 0; i < re.data.data.length; i++) {
             if (re.data.data[i].data > 0) {
               flag = true
             }
             var obj = {
-              name: re.data.data[i].name + "¥ " + parseFloat(re.data.data[i].data),
+              name: re.data.data[i].name + "¥ " + parseFloat(re.data.data[i].data)+".00",
               data: parseFloat(re.data.data[i].data)
             }
+            total += parseFloat(re.data.data[i].data)
             arr.push(obj)
 
           }
+          self.setData({
+            total: total+".00"
+          })
 
           if (flag && arr.length == re.data.data.length) {
 

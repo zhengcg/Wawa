@@ -1,13 +1,13 @@
 <view class='container'>
 <scroll-view scroll-y="true">
-  <block wx:for="{{list}}" wx:key="{{item.id}}">
-    <view class='title'>{{item.do_time}}</view> 
+<view class='title'>{{time}}</view> 
+
+    
     <view class='body'>
-       <view wx:for="{{item.imgs}}" wx:key="{{index}}" wx:for-item="itemName" class='imgBoxYY'>
-        <image src='{{itemName}}' bindtap='previewImg' data-url='{{itemName}}'  data-id="{{item.id}}"/>
+       <view wx:for="{{list}}" wx:key="{{index}}"  class='imgBoxYY'>
+        <image src='{{item}}' bindtap='previewImg' data-url='{{item}}'/>
       </view> 
     </view>
-   </block>
   </scroll-view>
 </view>
 

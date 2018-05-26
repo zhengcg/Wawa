@@ -1,2 +1,13 @@
- <!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
-<view wx:else>请升级微信版本</view>  -->
+    <!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>  
+
+<navigator url='/pages/xieyi/xieyi'>协议声明</navigator>   -->
+<view class='tu'>
+  <image src='../../images/icon38.png' mode='aspectFit'></image>
+</view>
+<view class='zi'>
+    <image src='../../images/icon40.png' mode='aspectFit'></image>
+</view>
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"><image src='../../images/icon39.png' mode='aspectFit'></image><text>微信用户快速登录</text></button>
+<view class='text' wx:else>请升级微信版本</view> 
+<view class='text'>点击登录，即表示已阅读并同意<navigator url='/pages/xieyi/xieyi'>《汪汪健康服务协议》</navigator></view>
