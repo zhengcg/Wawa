@@ -101,7 +101,7 @@ Page({
               temArr: temArr,
               isCanvas: false,
               range: res.data.data.data[0].range,
-              content: res.data.data.data.data_info.content
+              content: res.data.data.data_info.content
             })
             _this.drawLine()
 
@@ -158,11 +158,11 @@ Page({
     lineChart = new wxCharts({
       canvasId: 'lineCanvas',
       type: 'line',
-      categories: self.data.arr,
+      categories: self.data.arr.reverse(),
       animation: true,
       series: [{
         name: '日期',
-        data: self.data.temArr,
+        data: self.data.temArr.reverse(),
         format: function (val, name) {
           return val;
         }

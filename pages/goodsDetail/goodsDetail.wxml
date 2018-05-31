@@ -36,7 +36,7 @@
     <view class='rightBtn'><image src='../../images/icon35.png'></image></view>
   </view>
 </view>
-<view class='addAdr' hidden='{{isYDZ}}'><navigator url='/pages/addAddress/addAddress?path=goodsDetail'>
+<view class='addAdr' hidden='{{isYDZ}}'><navigator url='/pages/addAddress/addAddress?path=receiveAd1&id={{goodsId}}'>
 <view>添加收货地址</view>
 <text>还没有收货地址，请点击添加</text>
 </navigator></view>

@@ -62,6 +62,22 @@ Page({
     })
 
   },
+  changeAbnormal:function(e){
+    var index = parseInt(e.currentTarget.dataset.index);
+    var yi = e.currentTarget.dataset.yi;
+    console.log(e)
+    console.log(yi)
+    console.log(index)
+    if(yi=='1'){
+      this.data.info[index].is_abnormal=2
+    }else{
+      this.data.info[index].is_abnormal = 1
+    }
+    this.setData({
+      info: this.data.info
+    })
+
+  },
   uploadImg:function(){
     var self=this;
     try {
@@ -340,6 +356,14 @@ Page({
   
 
   },
+  goBack: function () {
+    var _this = this;
+    _this.data.imgs.pop();
+    wx.redirectTo({
+      url: '../uploadHYD/uploadHYD?imgs=' + _this.data.imgs.toString() + '&jz_id=' + _this.data.jz_id
+    })
+  },
+
 
 
   /**

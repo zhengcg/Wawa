@@ -32,13 +32,14 @@ Page({
         tabCur: options.tabCur
       })
     }
-
     this.setData({
       endDate: this.formatDate(new Date()),
       dateEnd: this.formatDate(new Date()),
       dateStart: this.lastDate(new Date())
     })  
-    this.checkToken(); 
+
+    
+    
 
   },
   setClass() {
@@ -65,9 +66,7 @@ Page({
     }
     this.setData({ members: this.data.members })
     this.setData({
-      showMember: this.data.members[parseInt(this.data.index)],
-      dateEnd: this.formatDate(new Date()),
-      dateStart: this.lastDate(new Date())
+      showMember: this.data.members[parseInt(this.data.index)]
     })  
     this.getDoc(this.data.members[parseInt(this.data.index)].id);
     this.getYc(this.data.members[parseInt(this.data.index)].id)
@@ -357,6 +356,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.checkToken();    
     
     
   },

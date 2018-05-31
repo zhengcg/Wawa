@@ -27,7 +27,7 @@
 </view>
 <view class='dateRange' >
   <view class="section">
-    <picker mode="date" value="{{dateStart}}"   end="{{endDate}}"bindchange="changeStart">
+    <picker mode="date" value="{{dateStart}}"   end="{{endDate}}" bindchange="changeStart">
       <view class="picker">
         {{dateStart}}
       </view>
@@ -36,7 +36,7 @@
   </view>
   <text>至</text>
    <view class="section">
-    <picker mode="date" value="{{dateEnd}}"   end="{{endDate}}"bindchange="changeEnd">
+    <picker mode="date" value="{{dateEnd}}"   end="{{endDate}}" bindchange="changeEnd">
       <view class="picker">
         {{dateEnd}}
       </view>
@@ -68,7 +68,7 @@
    <view class='dataList'  hidden='{{jkTab!=="1"}}'>
     <navigator url='/pages/hy/hy?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}'><text>原始数据</text></navigator>
     <navigator url='/pages/cl/cl?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=normal'><text>正常数据</text>{{znum}}</navigator>
-    <navigator url='/pages/lcl/cl?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=current_unnormal'><text>当前异常</text>{{dnum}}</navigator>
+    <navigator url='/pages/cl/cl?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=current_unnormal'><text>当前异常</text>{{dnum}}</navigator>
        <navigator url='/pages/cl/cl?mid={{showMember.id}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type=unnormal'><text>历史异常</text>{{lnum}}</navigator>
     <!-- <navigator url='/pages/hc/hc?mid={{showMember.id}}&title={{item.title_cn}}&mni_time={{dateStart}}&max_time={{dateEnd}}' wx:for="{{yc}}" wx:key="{{index}}"><text>{{item.title_cn}}</text>{{item.num}}次异常</navigator> -->
   </view>

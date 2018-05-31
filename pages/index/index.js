@@ -8,16 +8,17 @@ Page({
    */
   data: {
     imgUrls: [
-      {
-        "ad_id": "2",
-        "img_url": 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        "ad_id": "3",
-        "img_url": 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-      }
-
-    ],
+      { 
+        "ad_id": 1,
+         "img_url": "https://m.hsfuture.cn/wangwang/public/static/images/1.jpg", 
+         "link": "../myCoin/myCoin" 
+       },
+       { 
+         "ad_id": 2,
+          "img_url": "https://m.hsfuture.cn/wangwang/public/static/images/2.jpg", 
+          "link": "../temperatureDetection/temperatureDetection" 
+       }
+      ],
     autoplay: true,
     interval: 5000,
     duration: 1000

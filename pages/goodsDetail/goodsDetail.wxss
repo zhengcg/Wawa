@@ -213,7 +213,7 @@ line-height: 84rpx;
 }
 .addAdr{
   padding: 0 40rpx;
-  height: 80rpx;
+  /* height: 80rpx; */
   line-height: 80rpx;
   font-size: 32rpx;
   color: #18BAFF;

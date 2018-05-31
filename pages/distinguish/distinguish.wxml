@@ -8,18 +8,21 @@
 <view style='padding:40rpx;'>
 <view id="panel" class="flex-column">
     <view class="flex-cell flex-row">
-    <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;'>项目</text>
-      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>代码</text>
+    <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 5;-webkit-flex-grow: 5;flex-grow: 5;'>项目</text>
+      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1.5;-webkit-flex-grow: 1.5;flex-grow: 1.5;'>代码</text>
       
-      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>结果</text>
-      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>参考范围</text>
+      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1.5;-webkit-flex-grow: 1.5;flex-grow: 1.5;'>结果</text>
+      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 2;-webkit-flex-grow: 2;flex-grow: 2;'>参考范围</text>
+      <text class="flex-cell flex-row" style='font-size:24rpx;-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'>异常</text>
     </view>
     <view class="flex-row flex-cell" wx:for="{{info}}" wx:key="{{index}}" >
-     <input class="flex-cell flex-row" type='text' value='{{item.title_cn}}'  data-index="{{index}}"  bindinput='changeTitleCn' style='-moz-flex-grow: 3;-webkit-flex-grow: 3;flex-grow: 3;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
-       <input class="flex-cell flex-row" type='text' value='{{item.title}}' data-index="{{index}}" bindinput='changeTitle' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
+     <input class="flex-cell flex-row" type='text' value='{{item.title_cn}}'  data-index="{{index}}"  bindinput='changeTitleCn' style='-moz-flex-grow: 5;-webkit-flex-grow: 5;flex-grow: 5;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
+       <input class="flex-cell flex-row" type='text' value='{{item.title}}' data-index="{{index}}" bindinput='changeTitle' style='-moz-flex-grow: 1.5;-webkit-flex-grow: 1.5;flex-grow: 1.5;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
     
-      <input class="flex-cell flex-row" type='text' value='{{item.result}}'  data-index="{{index}}" bindinput='changeResult' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
-      <input class="flex-cell flex-row" type='text' value='{{item.range}}'  data-index="{{index}}" bindinput='changeRange' style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
+      <input class="flex-cell flex-row" type='text' value='{{item.result}}'  data-index="{{index}}" bindinput='changeResult' style='-moz-flex-grow: 1.5;-webkit-flex-grow: 1.5;flex-grow: 1.5;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
+      <input class="flex-cell flex-row" type='text' value='{{item.range}}'  data-index="{{index}}" bindinput='changeRange' style='-moz-flex-grow: 2;-webkit-flex-grow:2;flex-grow: 2;color:{{item.is_abnormal==1?"#666":"red"}}'></input>
+      <text class="flex-cell flex-row fei" style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;' wx:if='{{item.is_abnormal==1}}' bindtap='changeAbnormal' data-index="{{index}}" data-yi="{{item.is_abnormal}}"></text>
+      <text class="flex-cell flex-row yi" style='-moz-flex-grow: 1;-webkit-flex-grow: 1;flex-grow: 1;'  wx:else bindtap='changeAbnormal' data-index="{{index}}"  data-yi="{{item.is_abnormal}}"></text>
     </view>
     
   </view>
@@ -30,4 +33,5 @@
 <view style='height:222rpx;'></view>
 <view class='footer'>
   <button bindtap='submit'>确认</button>
+   <view bindtap='goBack' class='goBack'>取消</view>
 </view>

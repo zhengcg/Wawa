@@ -4,8 +4,8 @@ App({
     
   },
   globalData: {
-    imgSrc:"https://appdev.qigle.com/wangwang/",
-    api: 'https://appdev.qigle.com/wangwang/api/',
+    imgSrc:"https://m.hsfuture.cn/wangwang/",
+    api: 'https://m.hsfuture.cn/wangwang/api/',
     header: {
       'content-type': 'application/json'
     }
