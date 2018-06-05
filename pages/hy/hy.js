@@ -33,6 +33,7 @@ Page({
     var self = this;
     var id = e.currentTarget.dataset.id;
     var index = e.currentTarget.dataset.index;
+    console.log(index);
     wx.showModal({
       title: '提示',
       content: '确定要删除吗？',
@@ -60,10 +61,16 @@ Page({
               try { wx.hideLoading() } catch (err) { console.log("当前微信版本不支持") }
               if (res.data.code == 200) {
 
-                self.data.list.splice(index, 1);
+                // self.data.list.splice(index, 1);
+                // self.setData({
+                //   list: self.data.list
+                // })
                 self.setData({
-                  list: self.data.list
+                  list: [],
+                  page: 1
                 })
+
+                self.getList()
 
               } else if (res.data.code == 401) {
                 wx.clearStorageSync()
