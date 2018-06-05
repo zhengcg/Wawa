@@ -18,7 +18,8 @@ Page({
     "range":"",
     mni_time: '',
     max_time: '',
-    content:''
+    content:'',
+    type:''
 
   },
 
@@ -30,7 +31,8 @@ Page({
       mid: options.mid,
       title:options.title,
       mni_time: options.mni_time,
-      max_time: options.max_time
+      max_time: options.max_time,
+      type:options.type
     })
 
     this.checkToken()
@@ -82,7 +84,9 @@ Page({
         m_id: parseInt(_this.data.mid),
         title_cn:_this.data.title,
         mni_time: _this.data.mni_time,
-        max_time: _this.data.max_time
+        max_time: _this.data.max_time,
+        type:_this.data.type
+
       },
       method: 'POST',
       success: function (res) {

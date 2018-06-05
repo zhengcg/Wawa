@@ -4,7 +4,7 @@
   </view>
   <scroll-view scroll-y style='height:1200rpx;'>
   <view  class='content'>
-    <navigator url='/pages/hc/hc?mid={{mid}}&title={{item.title}}&mni_time={{dateStart}}&max_time={{dateEnd}}' wx:for="{{yc}}" wx:key="{{index}}"><text>{{item.title}}</text>{{item.num}}</navigator>
+    <navigator url='/pages/hc/hc?mid={{mid}}&title={{item.title}}&mni_time={{dateStart}}&max_time={{dateEnd}}&type={{type}}' wx:for="{{yc}}" wx:key="{{index}}"><text>{{item.title}}</text>{{item.num}}</navigator>
     <view class='dataList' wx-if="{{yc.length==0}}" style='text-align:center;padding-top:30rpx;font-size:28rpx;'>
      没有数据
   </view>
